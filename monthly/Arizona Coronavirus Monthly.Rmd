@@ -88,7 +88,7 @@ ggplot(total.tests, aes(x = date, y = runtotal)) +
   geom_col(aes(y = totalTestResultsIncrease), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Tests per Day", labels = comma, sec.axis = sec_axis(trans = ~./pop.az, labels = percent_format(accuracy = .01)))
 
 ```
@@ -102,7 +102,7 @@ This shows how many total tests we have conducted per capita. The goal of this i
 ggplot(total.tests, aes(x = date, y = totalTestResults/pop.az)) +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Cumulative Tests Per Capita", labels = percent_format(accuracy = 1))
 
 ```
@@ -119,7 +119,7 @@ ggplot(pos.tests, aes(x = date, y = posrun)) +
   geom_col(aes(y = positiveIncrease), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Positive Tests per Day", labels = comma)
 
 ```
@@ -132,7 +132,7 @@ ggplot(pos.tests, aes(x = date, y = posrun/pop.az)) +
   geom_col(aes(y = positiveIncrease/pop.az), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Per Capita Positive Tests per Day", labels = percent_format(accuracy = .001))
 
 ```
@@ -146,7 +146,7 @@ ggplot(pos.tests, aes(x = date, y = posperc)) +
   geom_col(aes(y = pospercdaily), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Positive Test Percentage", labels = percent_format(accuracy = 1))
 ```
 
@@ -161,7 +161,7 @@ ggplot(hosp.change, aes(x = date, y = hospchg)) +
   geom_col(aes(y = hospinc), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Daily Hospitalizations Change", labels = comma)
 
 ```
@@ -175,7 +175,7 @@ ggplot(death.case, aes(x = date, y = deathrun)) +
   geom_col(aes(y = deathIncrease), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Daily Deaths", labels = comma)
 ```
 
@@ -188,7 +188,7 @@ ggplot(med.care, aes(x = date, y = hospcaprun)) +
   geom_col(aes(y = hospitalizedCurrently), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Number Currently Hospitalized", labels = comma) +
   ggtitle("Hospital Beds Occupied") +
   theme(plot.title = element_text(hjust = .5))
@@ -201,7 +201,7 @@ ggplot(med.care, aes(x = date, y = icurun)) +
   geom_col(aes(y = inIcuCurrently), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Number In ICU", labels = comma) +
   ggtitle("ICU Utilization") +
   theme(plot.title = element_text(hjust = .5))
@@ -214,7 +214,7 @@ ggplot(med.care, aes(x = date, y = ventrun)) +
   geom_col(aes(y = onVentilatorCurrently), alpha = .3, color = "#cccccc") +
   geom_line(size = 1) +
   theme_me() +
-  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "2 week") +
+  scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
   scale_y_continuous(name = "Number on Ventilators", labels = comma) +
   ggtitle("Current Ventilator Use") +
   theme(plot.title = element_text(hjust = .5))
