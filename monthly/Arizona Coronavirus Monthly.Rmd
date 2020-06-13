@@ -179,9 +179,9 @@ ggplot(death.case, aes(x = date, y = deathrun)) +
   scale_y_continuous(name = "Daily Deaths", labels = comma)
 ```
 
-### Care Capacity
+### Hospital Occupancy
 
-This is how much medical resources are devoted to caring for Coronavirus patients. The lines are 7-day running averages.
+This is how many hospital beds are devoted to caring for Coronavirus patients. The line is a 7-day running average.
 
 ```{r hospital capacity}
 ggplot(med.care, aes(x = date, y = hospcaprun)) +
@@ -195,6 +195,9 @@ ggplot(med.care, aes(x = date, y = hospcaprun)) +
 
 ```
 
+### ICU Capacity
+
+This is how many Coronavirus patients are in the ICU. The line is a 7-day running average.
 
 ```{r icu capacity}
 ggplot(med.care, aes(x = date, y = icurun)) +
@@ -208,6 +211,9 @@ ggplot(med.care, aes(x = date, y = icurun)) +
 
 ```
 
+### Ventilator Usage
+
+This is how many Ventilators are currently being used. The line is a 7-day running average.
 
 ```{r vent capacity}
 ggplot(med.care, aes(x = date, y = ventrun)) +
