@@ -74,7 +74,7 @@ death.case <- az.covid[!is.na(az.covid$deathrun),]
 
 ```
 
-To see all data from mid-march, [see this view](../index.html)
+To see all data from mid-march, [see this view](index.html)
 
 ## Total Testing {.tabset}
 

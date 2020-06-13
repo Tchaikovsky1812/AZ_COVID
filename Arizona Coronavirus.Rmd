@@ -72,7 +72,7 @@ death.case <- az.covid[!is.na(az.covid$deathrun),]
 
 ```
 
-To see only the most recent 30 days of data, [see this view](monthly/index.html)
+To see only the most recent 30 days of data, [see this view](monthly.html)
 
 ## Total Testing {.tabset}
 
