@@ -147,7 +147,8 @@ ggplot(pos.tests, aes(x = date, y = posperc)) +
   geom_line(size = 1) +
   theme_me() +
   scale_x_date(name = element_blank(), labels = date_format("%b-%d"), breaks = "1 week") +
-  scale_y_continuous(name = "Positive Test Percentage", labels = percent_format(accuracy = 1))
+  scale_y_continuous(name = "Positive Test Percentage", labels = percent_format(accuracy = 1)) +
+  coord_cartesian(ylim = c(0, min(1, max(pos.tests$posperc) + .01)))
 ```
 
 ## Medical Care {.tabset}
