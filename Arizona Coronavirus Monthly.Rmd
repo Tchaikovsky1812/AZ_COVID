@@ -196,7 +196,7 @@ ggplot(med.care, aes(x = date, y = hospcaprun)) +
 
 ```
 
-### ICU Capacity
+### ICU Occupancy
 
 This is how many Coronavirus patients are in the ICU. The line is a 7-day running average.
 
